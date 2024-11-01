@@ -38,7 +38,7 @@ public class StringUtilities {
      */
     public static String getPrefix(String input){
 
-        return input;
+        return input.substring(0,4);
     }
 
     /**
@@ -65,10 +65,9 @@ public class StringUtilities {
      * @return the middle character of `inputValue`
      */
     public static Character getMiddleCharacter(String inputValue){
-        int lenght = inputValue.length();
-        int middle = lenght/2;
-        char foundIt = (length %2 == 0) ? inputValue.charAt(middle-1) : inputValue.charAt(middle) ;
-        return foundIt;
+        char middle = inputValue.charAt((inputValue.length()-1)/2);
+        return middle;
+
     }
 //public static Character getMiddleCharacter(String inputValue){
 //        char middle = inputValue.charAt((inputValue.length()-1)/2);
@@ -89,10 +88,7 @@ public class StringUtilities {
      * @return the second word of a string delimited by spaces.
      */
     public static String getSecondWord(String spaceDelimitedString) {
-//        String [] word = spaceDelimitedString.split(" ");
-//        String secondWords = word [1];
-//        return secondWords;
-        public static String getFirstWord (String spaceDelimitedString){
+
             String[] whatItis = spaceDelimitedString.split(" ");
             return whatItis[0];
         }
@@ -102,12 +98,10 @@ public class StringUtilities {
          * @return an identical string with characters in reverse order.
          */
         public static String reverse (String stringToReverse){
-            char[] letters = stringToReverse.toCharArray();
-            String result = "";
-            for (char i : letters) {
-                result = i + result;
-            }
+                char[] letters = stringToReverse.toCharArray();
+                String result = "";
+                for(char i:letters) {
+                    result = i+result;}
+                return result;}
 
-        }
     }
-
